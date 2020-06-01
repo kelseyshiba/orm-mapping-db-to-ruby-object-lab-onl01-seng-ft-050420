@@ -68,6 +68,7 @@ class Student
   
   def self.students_below_12th_grade
     sql = <<-SQL
+<<<<<<< HEAD
       SELECT * FROM students 
       WHERE grade < 12;
     SQL
@@ -108,4 +109,12 @@ class Student
     DB[:conn].execute(sql, n)
   end
   
+=======
+      SELECT students.name FROM students 
+      WHERE grade < 11;
+    SQL
+    
+    DB[:conn].execute(sql)
+  end
+>>>>>>> f03b24c047c0fdc51c4f4900c6f264474da60f21
 end
